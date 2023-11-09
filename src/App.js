@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Form from './Form';
 
-function App() {
+const App = () => {
+  const [data, setData] = useState('');
+  const [carbonEmission, setCarbonEmission] = useState(''); // New state for Carbon Emission
+
+  useEffect(() => {
+    const socket = new WebSocket('ws://localhost:3001'); // Adjust the server address
+
+    socket.onmessage = (event) => {
+      setData(event.data);
+      // Assuming that the data received is the Carbon Emission value (you may need to parse or format it accordingly)
+      setCarbonEmission(event.data);
+    };
+
+    return () => {
+      socket.close();
+    };
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Serial Port Data</h1>
+      <p>Data received: {data}</p>
+      <div className="App">
+        <Form carbonEmission={carbonEmission} /> {/* Pass carbonEmission as a prop */}
+      </div>
     </div>
   );
-}
+};
 
 export default App;

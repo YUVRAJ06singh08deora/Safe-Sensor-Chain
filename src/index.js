@@ -1,3 +1,7 @@
+import 'process';
+import 'buffer';
+import 'util';
+import 'stream-browserify';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
