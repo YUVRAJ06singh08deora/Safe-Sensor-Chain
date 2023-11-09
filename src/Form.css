@@ -1,0 +1,139 @@
+/* Apply a blue and white theme to the entire page */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #3498db 0%, #ffffff 100%); /* Gradient background (blue to white) */
+  color: #333; /* Text color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the main container */
+div {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the application title */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #3498db; /* Blue title color */
+}
+
+/* Style the buttons */
+.dabba {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db; /* Blue button background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dabba:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Style the text for Metamask account and contract connection status */
+.metamaskkadata, .connecthuakinhi {
+  text-align: center;
+  color: #666; /* Dark gray text color */
+  margin: 10px 0;
+}
+
+/* Style the input fields */
+.set1 {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white input background */
+  color: #333; /* Text color */
+  border: 1px solid #3498db; /* Blue border */
+  border-radius: 5px;
+  margin: 10px 0;
+  transition: border-color 0.3s;
+}
+
+.set1:focus {
+  border-color: #2980b9; /* Darker blue on focus */
+  outline: none;
+}
+
+/* Style the "Add Details" button */
+.dabba.addDetails {
+  width: 50%;
+}
+
+/* Style the "Search Data" section */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #3498db; /* Blue title color */
+  margin: 20px 0;
+}
+
+/* Style the search input field and button */
+input[name="searchAadharNumber"] {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white input background */
+  color: #333; /* Text color */
+  border: 1px solid #3498db; /* Blue border */
+  border-radius: 5px;
+  margin: 10px 0;
+  transition: border-color 0.3s;
+}
+
+input[name="searchAadharNumber"]:focus {
+  border-color: #2980b9; /* Darker blue on focus */
+  outline: none;
+}
+
+.dabba-search {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: #3498db; /* Blue button background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dabba-search:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Style the fetched data section */
+.fetched-data {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #3498db; /* Blue border */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+}
+
+/* Style the fetched data text */
+.fetched-data p {
+  margin: 5px 0;
+}
+
+/* Style the "Fetched Data" section text */
+.fetched-data h3 {
+  font-size: 18px;
+  color: #3498db; /* Blue title color */
+}
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
